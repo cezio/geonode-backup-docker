@@ -29,7 +29,7 @@ rclone --config /root/rclone.conf copy local:/mnt/volumes/data/  dest:${TARGET_D
 rclone --config /root/rclone.conf copy local:/mnt/volumes/statics/  dest:${TARGET_DIR}/statics/
 
 # tar.gz files
-tar -czf ${TARGET_FILE} ${TARGET_DIR}/*
+tar -czf ${TARGET_FILE} ${TARGET_DIR}/{data,statics}/
 
 # clean intermediate dirs
 rm -fr ${TARGET_DIR}/{data,statics}
